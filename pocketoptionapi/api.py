@@ -139,6 +139,7 @@ class PocketOptionAPI(object):  # pylint: disable=too-many-instance-attributes
     historyNew = None
     server_timestamp = None
     sync_datetime = None
+    update_stream_callback = None
 
     # ------------------
 

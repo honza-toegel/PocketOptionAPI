@@ -1,11 +1,19 @@
 import websockets
 import anyio
 from rich.pretty import pprint as print
+import os
 import json
 from pocketoptionapi.constants import REGION
 
-SESSION = r'42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"a1dc009a7f1f0c8267d940d0a036156f\";s:10:\"ip_address\";s:12:\"190.162.4.33\";s:10:\"user_agent\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OP\";s:13:\"last_activity\";i:1709914958;}793884e7bccc89ec798c06ef1279fcf2","isDemo":0,"uid":27658142,"platform":1}]'
+# How to get SSID from Pocket Options
+# https://www.youtube.com/watch?v=YpM5BeNFvaI&ab_channel=tradingbots
+# 1) go to pocket options in your chrome - select the desired market - real/demo
+# 2) go to chrome devtools, network tab, WS tab
+# 3) click on any request and in messages tab filter for "auth"
+# example SSID begins like: 42["auth",{"session":"a:4:{s:10:\"session_id\";s:32:\"10951......
 
+# Read SSID from env variable (or use dotenv to read from local files if you have more environments)
+ssid = os.getenv("SSID")
 
 async def websocket_client(url, pro):
     for i in REGION.get_regions(REGION):
@@ -52,7 +60,7 @@ async def pro(message, websocket, url):
 
     if message.startswith('40{"sid":"'):
         print(f"{url.split('/')[2]} got 40 sid send session")
-        await websocket.send(SESSION)
+        await websocket.send(ssid)
         print("message sent! We are logged in!!!")
 
 

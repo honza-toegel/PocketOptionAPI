@@ -200,6 +200,7 @@ class WebsocketClient(object):
             elif self.updateStream and isinstance(message, list):
                 self.updateStream = False
                 self.api.time_sync.server_timestamp = message[0][1]
+                self.api.update_stream_callback(self, message[0])
 
             elif self.updateHistoryNew and isinstance(message, dict):
                 self.updateHistoryNew = False

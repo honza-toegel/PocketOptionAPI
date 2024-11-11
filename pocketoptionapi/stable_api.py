@@ -404,5 +404,8 @@ class PocketOption:
     def change_symbol(self, active, period):
         return self.api.change_symbol(active, period)
 
+    def set_update_stream_callback(self, callback_function):
+        self.api.update_stream_callback = callback_function
+
     def sync_datetime(self):
         return self.api.synced_datetime
