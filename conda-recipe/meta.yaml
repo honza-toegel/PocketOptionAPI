@@ -1,0 +1,30 @@
+package:
+  name: pocketoptionapi
+  version: "1.0.0"  # Version of your package
+
+source:
+  path: .  # Use current directory as source
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python >=3.10
+    - numpy >=1.26.4
+    - pandas >=2.2.2
+    - requests >=2.32.3
+    - anyio >=4.6.2
+    - numexpr >=2.10.1
+    - bottleneck >=1.4.2
+    - pytz >=2024.1
+    - tzlocal >=5.2
+    - websockets >=10.4
+    - typing_extensions >=4.11.0
+    - urllib3 >=2.2.3
+    - python-dateutil >=2.9.0
+
+about:
+  home: https://github.com/honza-toegel/PocketOptionAPI
+  summary: "Pocket Options API"
+  license: MIT
