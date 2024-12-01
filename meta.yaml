@@ -3,7 +3,7 @@ package:
   version: "1.0.0"  # Version of your package
 
 source:
-  path: .  # Use current directory as source
+  path: ./pocketoptionapi  # Use current directory as source
 
 requirements:
   build:
