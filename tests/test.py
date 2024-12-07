@@ -1,8 +1,9 @@
 import time
 import datetime
-from pocketoptionapi.stable_api import PocketOption
 import logging
 import os
+
+from pocketoptionapi import PocketOption
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 

@@ -1,14 +1,20 @@
 package:
   name: pocketoptionapi
-  version: "1.0.0"  # Version of your package
+  version: 1.0.0
 
 source:
-  path: ./pocketoptionapi  # Use current directory as source
+  # Use the GitHub repository as the source
+  git_url: https://github.com/honza-toegel/PocketOptionAPI
+  git_branch: main  # Replace with the appropriate tag or branch
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.10
+    - pip
   run:
     - python >=3.10
     - numpy >=1.26.4
@@ -24,7 +30,18 @@ requirements:
     - urllib3 >=2.2.3
     - python-dateutil >=2.9.0
 
+test:
+  commands:
+    - python -c "import pocketoptionapi"  # Replace with actual test commands if available
+
 about:
   home: https://github.com/honza-toegel/PocketOptionAPI
-  summary: "Pocket Options API"
   license: MIT
+  license_family: MIT
+  summary: "Pocket Options API - A Python API for PocketOption"
+  description: |
+    A Python API for interacting with PocketOption, designed to be simple and effective.
+
+extra:
+  recipe-maintainers:
+    - your-github-username  # Replace with the actual maintainer's GitHub username

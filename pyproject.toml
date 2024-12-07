@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketoptionapi"
+version = "1.0.0"
+description = "Pocket Options API"
+readme = { text = "A Python API for PocketOption" }
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "", email = "" }
+]
+urls = { "Homepage" = "https://github.com/honza-toegel/PocketOptionAPI" }
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.optional-dependencies]
+# Define optional dependencies here if needed, e.g., dev = ["pytest", ...]
+
+[project.dependencies]
+numpy = ">=1.26.4"
+pandas = ">=2.2.2"
+requests = ">=2.32.3"
+anyio = ">=4.6.2"
+numexpr = ">=2.10.1"
+bottleneck = ">=1.4.2"
+pytz = ">=2024.1"
+tzlocal = ">=5.2"
+websockets = ">=10.4"
+typing_extensions = ">=4.11.0"
+urllib3 = ">=2.2.3"
+python-dateutil = ">=2.9.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pocketoptionapi*"]
