@@ -10,7 +10,7 @@ readme = "README.md"  # Replace with your actual README file name
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
-    { name = "", email = "" }
+    { name = "Jan Toegel", email = "honza.toegel@gmail.com" }
 ]
 urls = { "Homepage" = "https://github.com/honza-toegel/PocketOptionAPI" }
 classifiers = [
