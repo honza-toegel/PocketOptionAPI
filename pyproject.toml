@@ -7,7 +7,7 @@ name = "pocketoptionapi"
 version = "1.0.0"
 description = "Pocket Options API"
 readme = "README.md"  # Replace with your actual README file name
-requires-python = ">=3.10"
+requires-python = ">=3.1"
 license = { text = "MIT" }
 authors = [
     { name = "Jan Toegel", email = "honza.toegel@gmail.com" }

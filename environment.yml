@@ -24,7 +24,7 @@ dependencies:
   - pandas=2.2.2=py310h313beb8_0
   - pip=24.2=py310hca03da5_0
   - pysocks=1.7.1=py310hca03da5_0
-  - python=3.10.15=hb885b13_1
+  - python=3.1
   - python-dateutil=2.9.0post0=py310hca03da5_2
   - python-tzdata=2023.3=pyhd3eb1b0_0
   - pytz=2024.1=py310hca03da5_0
