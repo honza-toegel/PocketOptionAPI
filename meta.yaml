@@ -6,9 +6,11 @@ source:
   # Use the GitHub repository as the source
   git_url: https://github.com/honza-toegel/PocketOptionAPI
   git_branch: main  # Replace with the appropriate tag or branch
+  #path: . #Enable instead of git_url and git_branch for a local conda-build without cloning from repo
 
 build:
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
