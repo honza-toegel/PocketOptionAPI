@@ -240,7 +240,6 @@ class WebsocketClient(object):
                 # Establecemos que hemos recibido el primer mensaje de interés
                 self._updateClosedDeals = True
                 self.wait_second_message = True  # Establecemos que esperamos el segundo mensaje de interés
-                await self.websocket.send('42["changeSymbol",{"asset":"AUDNZD_otc","period":60}]')
 
             elif message[0] == "successcloseOrder":
                 self.successCloseOrder = True
